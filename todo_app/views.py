@@ -2,7 +2,6 @@ from rest_framework import viewsets, mixins, pagination
 from .models import Todo
 from .serializers import TodoSerializer
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 
 class TodoPagination(pagination.PageNumberPagination):
     page_size = 5

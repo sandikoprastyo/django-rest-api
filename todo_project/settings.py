@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,8 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# settings.py
-# AUTH_USER_MODEL = 'authentication.CustomUser'
+# Auth
+AUTH_USER_MODEL = 'auth.User'
 
 # Application definition
 
@@ -44,7 +45,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "todo_app",
     "token_auth",
-    # "authentication"
+    "users"
 ]
 
 # rest_framework
@@ -57,8 +58,15 @@ REST_FRAMEWORK = {
     ),
 }
 
+
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
+    # Token kedaluwarsa dalam 5 menit
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    # Refresh token akan kedaluwarsa setelah 1 hari
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+    # Token refresh dapat dilakukan dalam 15 menit sebelum kedaluwarsa
+    'SLIDING_TOKEN_REFRESH_LIFETIME_GRACE_PERIOD': timedelta(minutes=15),
 }
 
 MIDDLEWARE = [

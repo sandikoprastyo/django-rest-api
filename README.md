@@ -36,12 +36,17 @@
 
 ### #step create new
 
-###### pip install django
+###### pip install [django]
 
-###### pip install djangorestframework
+###### pip install [djangorestframework]
 
 ###### django-admin startproject {name project}
 
 ###### cd todo_project
 
 ###### python manage.py startapp {name module}
+
+
+
+[djangorestframework]: <https://www.django-rest-framework.org/tutorial/quickstart/>
+[django]: <https://www.djangoproject.com/download/>
