@@ -1,0 +1,44 @@
+# Ignore virtual environment
+venv/
+env/
+*.pyc
+__pycache__/
+
+# Ignore database
+db.sqlite3
+
+# Ignore media files
+media/
+
+# Ignore static files
+staticfiles/
+
+# Ignore generated files
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+__pycache__
+*.egg-info/
+dist/
+build/
+.vscode/
+
+# Ignore local settings
+todo_project/settings/local.py
+
+# Ignore secret keys and sensitive information
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.csr
+*.crt
+*.key
+*.pem
+
+# Ignore .env files that may contain sensitive information
+.env
+
+# Ignore logs
