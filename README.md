@@ -1,23 +1,47 @@
+### Step 1: clone repository
 
-# Step 1: install django
-# pip install django
-# pip install djangorestframework
+###### git clone https://github.com/sandikoprastyo/django-rest-api.git
 
-# Step 2: install todo_app module
-# django-admin startproject todo_project
-# cd todo_project
-# python manage.py startapp todo_app
+###### python3 -m venv venv
 
-# Step 3:
-# python manage.py runserver
-# python manage.py makemigrations
-# python manage.py migrate
+###### source venv/bin/activate
 
-# Step 4: run venv
-## source venv/bin/activate
+###### pip install -r requirements.txt
 
-# deactive venv 
-## deactivate
+### Step 2:
 
-# check pip list packages
-## pip list
+###### python manage.py runserver
+
+###### python manage.py makemigrations
+
+###### python manage.py migrate
+
+----------------------------------------------------------------
+
+### #deactive venv
+
+###### deactivate
+
+----------------------------------------------------------------
+
+### #pip
+
+###### pip list
+
+###### pip freeze
+
+###### pip freeze > requirements.txt
+
+----------------------------------------------------------------
+
+### #step create new
+
+###### pip install django
+
+###### pip install djangorestframework
+
+###### django-admin startproject {name project}
+
+###### cd todo_project
+
+###### python manage.py startapp {name module}
