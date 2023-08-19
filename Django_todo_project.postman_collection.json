@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "037fdd91-d0a0-4075-affc-1746d450317c",
+		"name": "Django_todo_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8035118"
+	},
+	"item": [
+		{
+			"name": "TODO",
+			"item": [
+				{
+					"name": "Todo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Tugas baru lagi\",\n    \"description\": \"Deskripsi tugas baru\",\n    \"completed\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/todos/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"todos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/todos/?page_size=5",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"todos",
+								""
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/todos/22/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"todos",
+								"22",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Tugas django\",\n    \"description\": \"Deskripsi 123124124\",\n    \"completed\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/todos/3/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"todos",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "New Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Memastikan respons berhasil (status code 200)",
+									"pm.test(\"Response status is 200 OK\", function() {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"// Menyimpan access token ke dalam environment variable",
+									"var jsonData = pm.response.json();",
+									"if (jsonData.access) {",
+									"    pm.environment.set(\"accessTokenUser\", jsonData.access);",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Pre-request Script untuk mengambil access token dan menyimpannya sebagai environment variable",
+									"pm.sendRequest({",
+									"    url: '{{HOST}}/api/token/',",
+									"    method: 'POST',",
+									"    header: {",
+									"        'Content-Type': 'application/x-www-form-urlencoded'",
+									"    },",
+									"    body: {",
+									"        mode: 'urlencoded',",
+									"        urlencoded: [",
+									"            { key: 'username', value: 'root' },",
+									"            { key: 'password', value: 'root' }",
+									"        ]",
+									"    }",
+									"}, function (err, response) {",
+									"    if (response) {",
+									"        // Pastikan respons berhasil (status code 200)",
+									"        if (response.code === 200) {",
+									"            var jsonData = response.json();",
+									"            if (jsonData.access) {",
+									"                pm.environment.set(\"access_token\", jsonData.access);",
+									"            }",
+									"        }",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "root",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/token/?username=root&password=root",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"token",
+								""
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "root"
+								},
+								{
+									"key": "password",
+									"value": "root"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessTokenUser}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/users/?page_size=10",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
