@@ -1,0 +1,181 @@
+repo_name: sandikoprastyo/django-rest-api
+report_id: 2208a96a121679331b3ab63da68d2230
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-04T14:54:58+00:00'
+requested_by: sandikoprastyo
+provider: github
+branch: master
+detected_tools_count: 13
+tools:
+- name: Python
+  description: A clear and powerful object-oriented programming language, comparable
+    to Perl, Ruby, Scheme, or Java.
+  website_url: https://www.python.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/.github/workflows/django.yml
+  detection_source: ".github/workflows/django.yml"
+  last_updated_by: sandikoprastyo
+  last_updated_on: 2023-08-19 09:16:18.000000000 Z
+- name: PyPI
+  description: A repository of software for the Python programming language
+  website_url: https://pypi.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Hosted Package Repository
+  image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-07-22 11:26:56.000000000 Z
+- name: Pillow
+  description: Python Imaging Library
+  website_url: https://python-pillow.github.io/
+  open_source: true
+  hosted_saas: false
+  category: Assets and Media
+  sub_category: Image Processing and Management
+  image_url: https://img.stackshare.io/service/2375/default_1f67b0ca7416a9f52beb655f90b5602d5ef74b75.jpg
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-08-19 09:29:22.000000000 Z
+- name: Django
+  description: A high-level Python Web framework that encourages rapid development
+    and clean
+  package_url: https://pypi.org/project/Django
+  version: 3.2.20
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19832/default_58dbe7b4d7ec447b62773209af0f9a31bbabf5bd.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-08-19 09:29:22.000000000 Z
+- name: PyJWT
+  description: JSON Web Token implementation in Python
+  package_url: https://pypi.org/project/PyJWT
+  version: 2.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19883/default_3863c7bb51d307217c188e059f67ca417c51efe3.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-07-22 11:26:56.000000000 Z
+- name: asgiref
+  description: ASGI specs, helper code, and adapters
+  package_url: https://pypi.org/project/asgiref
+  version: 3.7.2
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20739/default_88a4948f616ae7ccb7210803d2bd72b72851b6e9.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-07-22 11:26:56.000000000 Z
+- name: django-cors-headers
+  description: Django-cors-headers is a Django application for handling the server
+    headers required for Cross-Origin Resource Sharing
+  package_url: https://pypi.org/project/django-cors-headers
+  version: 4.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20425/default_fd0859a8a050b41b42cc678a2c0c5f51ce41801a.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-08-19 09:29:22.000000000 Z
+- name: djangorestframework
+  description: Web APIs for Django, made easy
+  package_url: https://pypi.org/project/djangorestframework
+  version: 3.14.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19870/default_d05f6f09935776629f62e8aed365805502c14921.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-08-19 09:29:22.000000000 Z
+- name: djangorestframework-simplejwt
+  description: A minimal JSON Web Token authentication plugin for Django REST Framework
+  package_url: https://pypi.org/project/djangorestframework-simplejwt
+  version: 5.2.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-08-19 09:29:22.000000000 Z
+- name: pytz
+  description: World timezone definitions, modern and historical
+  package_url: https://pypi.org/project/pytz
+  version: '2023.3'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19841/default_bb711fa267b2329ed689711a5adb7d9e74610b20.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-07-22 11:26:56.000000000 Z
+- name: sqlparse
+  description: Non-validating SQL parser
+  package_url: https://pypi.org/project/sqlparse
+  version: 0.4.4
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20039/default_a7a70921d2d3189665c78015850dc968f41705a1.png
+  detection_source_url: https://github.com/sandikoprastyo/django-rest-api/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dicko
+  last_updated_on: 2023-07-22 11:26:56.000000000 Z
